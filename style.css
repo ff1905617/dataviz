@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #171717;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+@font-face {
+    font-family: 'consolas';
+    src: url(consola.ttf);
+}
+@font-face {
+    font-family: 'consolas bold';
+    src: url(consolab.ttf);
+}
+@font-face {
+    font-family: 'consolas italic';
+    src: url(consolai.ttf);
+}
+/*TEXT STYLES*/
+hr{
+    color: white;
+    margin-top: 16px;
+}
+h1{
+    font-family: 'consolas';
+    font-size: 48px;
+    color: white;
+}
+h2{
+    font-family: 'consolas';
+    font-size: 24px;
+    color: white;
+}
+h3{
+    font-family: 'consolas';
+    font-size: 120px;
+    color: white;
+}
+h4{
+    font-family: 'consolas';
+    font-size: 36px;
+    color: white;
+}
+h5{
+    font-family: 'consolas';
+    font-size: 72px;
+    color: white;
+}
+p{
+    font-family: 'consolas';
+    font-size: 16px;
+    color: white;
+}
+li{
+    font-family: 'consolas';
+    font-size: 16px;
+    color: white;
+}
+ol{
+    list-style-type: none;
+}
+.title-block{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+/*CONTAINERS*/
+
+.row-header-container{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    background-color: white;
+    color: #171717;
+    border-style: ridge;
+    border-color: white;
+    border-width: 3px;
+}
+.row-header-container p{
+    color: #171717;
+}
+.row-container{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 36px;
+    background-color: #171717;
+    border-style: ridge;
+    border-color: white;
+    border-width: 3px;
+    overflow-y: scroll;
+}
+.row{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    border-style: solid;
+    border-color: white;
+    border-top-width: 0px;
+    border-bottom-width: 3px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    background-color: #171717;
+}
+.row:hover{
+    background-color: #ffffff;
+    cursor: crosshair;
+}
+.row:hover p{
+    color: #171717;
+}
+.row-item{
+    padding: 16px;
+}
+.result-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-top: 24px;
+}
+.result-item{
+    width: 150px;
+    height: 150px;
+    background-color: #171717;
+    border-style: ridge;
+    border-color: white;
+    border-width: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heartbeat h3{
+    text-align: center;
+}
+.stats{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.heartbeat{
+    grid-column: 1 / 4;
+    width: 855px;
+    height: 190px;
+    background-color: #171717;
+    border-style: ridge;
+    border-color: white;
+    border-width: 3px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#monitor{
+    width: 400px;
+    height: 400px;
+    border-style: ridge;
+    border-color: white;
+    border-width: 3px;
+    background-image: url('heart1.gif');
+    background-size: cover;
+}
+.animate-red{
+    animation: redflash linear 100ms infinite;
+    animation-name: redflash;
+}
+.animate-yellow{
+    animation: yellowflash linear 300ms infinite;
+    animation-name: yellowflash;
+}
+/*KEYFRAMES*/
+
+@keyframes redflash{
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: red;
+    }
+}
+
+@keyframes yellowflash{
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: yellow;
+    }
+}
